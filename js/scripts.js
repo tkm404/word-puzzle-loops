@@ -1,15 +1,5 @@
 function firstPuzzle() {
-let quoteOne = liFirst;
-console.log(quoteOne);
-const quoteOneArray = quoteOne.split("");
-quoteOneArray.forEach(function(element) {
-	if (element.toLowerCase() === "a" || "e" || "i" || "o" || "u") {
-		return quoteOne.replaceAll(element, "*")
-	} else {
-		return quoteOne
-	}
-});
-}
+
 
 window.onload = function(event) {
   event.preventDefault();
