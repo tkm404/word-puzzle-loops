@@ -1,9 +1,17 @@
 function firstPuzzle(text) {
 	let puzzleArray = text.split("");
-	let output;
+	let output = text;
 	puzzleArray.forEach(function(element) {
-		if (element === "a", "e", "i", "o", "u") {
-			output = true;
+		if (element.toLowerCase().includes("a")) {
+			output = output.replace("a", "-");
+		} else if (element === "e") {
+			output = output.replace("e", "-");
+		} else if (element === "i") {
+			output = output.replace("i", "-");
+		} else if (element === "o") {
+			output = output.replace("o", "-");
+		} else if (element === "u") {
+			output = output.replace("u", "-");
 		}
 	});
 	return output;
