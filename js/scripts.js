@@ -23,10 +23,18 @@ function puzzleBox1() {
 	console.log(document.getElementById("text-passage"))
 	const makePuzzle = firstPuzzle(passage);
 	document.getElementById("outputBox").innerText = makePuzzle;
+	document.getElementById("text-passage").setAttribute("class", "hidden");
+	document.getElementById("answer-button").removeAttribute("class");
+}
+
+function answerPuzzle() {
+event.preventDefault();
+document.getElementById("text-passage").removeAttribute("class");
 }
 
 window.addEventListener("load", function() {
 	document.querySelector("button#button-man").addEventListener("click", puzzleBox1)
+	document.querySelector("button#answer-button").addEventListener("click", answerPuzzle)
 });
 
 window.onload = function(event) {
