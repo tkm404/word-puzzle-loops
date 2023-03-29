@@ -1,3 +1,16 @@
+function firstPuzzle() {
+let quoteOne = liFirst;
+console.log(quoteOne);
+const quoteOneArray = quoteOne.split("");
+quoteOneArray.forEach(function(element) {
+	if (element.toLowerCase() === "a" || "e" || "i" || "o" || "u") {
+		return quoteOne.replaceAll(element, "*")
+	} else {
+		return quoteOne
+	}
+});
+}
+
 window.onload = function(event) {
   event.preventDefault();
   const div = document.createElement("div")
@@ -15,4 +28,3 @@ window.onload = function(event) {
 	liSecond.append("Knowledge is Power. Francis Bacon");
 	liThird.append("Be the change that you wish to see in the world. Mahatma Ghandi");
 }
-
