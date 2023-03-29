@@ -17,10 +17,24 @@ function firstPuzzle(text) {
 	return output;
 }
 
+function puzzleBox1() {
+	event.preventDefault();
+	const passage = document.getElementById("text-passage").value;
+	console.log(document.getElementById("text-passage"))
+	const makePuzzle = firstPuzzle(passage);
+	document.getElementById("outputBox").innerText = makePuzzle;
+}
+
+window.addEventListener("load", function() {
+	document.querySelector("button#button-man").addEventListener("click", puzzleBox1)
+});
 
 window.onload = function(event) {
   event.preventDefault();
-  const div = document.createElement("div")
+	const head = document.createElement("h1")
+	document.querySelector("body").prepend(head);
+	head.append("Word Puzzle");
+  const div = document.createElement("div");
   document.querySelector("body").append(div)
   const p = document.createElement("p");
   document.querySelector("div").append(p);
@@ -35,3 +49,4 @@ window.onload = function(event) {
 	liSecond.append("Knowledge is Power. Francis Bacon");
 	liThird.append("Be the change that you wish to see in the world. Mahatma Ghandi");
 }
+
