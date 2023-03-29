@@ -1,4 +1,13 @@
-function firstPuzzle() {
+function firstPuzzle(text) {
+	let puzzleArray = text.split("");
+	let output;
+	puzzleArray.forEach(function(element) {
+		if (element === "a", "e", "i", "o", "u") {
+			output = true;
+		}
+	});
+	return output;
+}
 
 
 window.onload = function(event) {
